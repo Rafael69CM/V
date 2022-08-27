@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaración</title>
+    <style>
+.body{
+    background-color: brown;
+    text-align: center;
+}
+.body__title{
+    color: black;
+}
+
+.body__img{
+    width: 30%;
+}
+    </style>
+</head>
+<body class="body">
+    <h1 class="body__title"> Quieres ser mi novia? ❤ </h1>
+    <img 
+         src="https://ih1.redbubble.net/image.2030964405.5315/pp,840x830-pad,1000x1000,f8f8f8.jpg" 
+         alt="porfavor di que si" class="body__img"/>
+
+    <button id="yes"> SI </button>
+    <button id="no"> NO </button>
+
+    <script>
+     const vutonSi = document.getElementById('yes')
+     const vutonNo = document.getElementById('no')
+
+     const somosnovios = () => {
+     alert('Prometo hacerte feliz');
+     location.href = 'https://www.youtube.com/watch?v=Vd8qNbi_fsU'; 
+     };
+
+     const cuandodigaqueno =() => {
+        vutonNo.style.position = 'absolute';
+        vutonNo.style.top = (Math.random() * window.innerHeight) + 'px';
+        vutonNo.style.left = (Math.random() * window.innerWidth) + 'px';
+     };
+
+     vutonSi.addEventListener('click', somosnovios);
+     vutonNo.addEventListener('mouseover', cuandodigaqueno)
+     </script>
+</body>
+</html>
